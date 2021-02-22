@@ -12,7 +12,7 @@ export class BooksService {
     }
 
     getOne(id: number): Book {
-        const book = this.books.find(book => book.id === id); //string으로 받아온 값을 number로 바꿔줌
+        const book = this.books.find(book => book.id === id);
         if (!book) {
             throw new NotFoundException(`Book with id ${id} not found.`);
         }
